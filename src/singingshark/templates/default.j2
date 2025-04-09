@@ -1,0 +1,4 @@
+{# Default template for transcript formatting #}
+{% for timestamp, speaker, text in lines %}
+[{{ timestamp }}] {{ speaker }}: {{ text }}
+{% endfor %}

@@ -1,0 +1,16 @@
+[project]
+name = "singingshark"
+version = "0.1.0"
+description = "Transcript fetcher and parser"
+readme = "README.md"
+authors = [{ name = "Taylor Monacelli", email = "taylormonacelli@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = ["jinja2>=3.0.0"]
+[project.scripts]
+singingshark = "singingshark:main"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff.lint]
+extend-select = ["I"]
