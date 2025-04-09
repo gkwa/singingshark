@@ -1,0 +1,10 @@
+{# JSON formatted template #}
+[
+  {% for timestamp, speaker, text in lines %}
+  {
+    "timestamp": "{{ timestamp }}",
+    "speaker": "{{ speaker }}",
+    "text": "{{ text }}"
+  }{% if not loop.last %},{% endif %}
+  {% endfor %}
+]

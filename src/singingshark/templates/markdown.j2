@@ -1,0 +1,8 @@
+{# Markdown formatted template #}
+# Transcript
+
+{% for timestamp, speaker, text in lines %}
+## {{ timestamp }}
+**{{ speaker }}**: {{ text }}
+
+{% endfor %}

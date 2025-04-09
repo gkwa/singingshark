@@ -1,0 +1,12 @@
+{# Conversation-focused template that groups by speaker and omits timestamps #}
+{% set current_speaker = None %}
+{% for timestamp, speaker, text in lines %}
+{% if speaker != current_speaker %}
+{% if not loop.first %}
+
+{% endif %}
+## {{ speaker }}
+{% set current_speaker = speaker %}
+{% endif %}
+{{ text }}
+{% endfor %}
